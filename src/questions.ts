@@ -1,6 +1,6 @@
-import { Questions } from './types';
+import { QuestionsType } from './types';
 
-const questions: Questions = [
+const questions: QuestionsType = [
   {
     id: 'q1',
     text: 'Which of the following definitions best describes React.js?',
