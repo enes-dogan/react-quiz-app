@@ -5,15 +5,14 @@ export type QuestionsType = {
   answers: [string, string, string, string]; // Tuple
 }[];
 
-export type answerStateType = 'answered' | 'correct' | 'wrong' | '';
-
 export interface QuestionProps {
-  questionText: string;
-  answers: string[];
-  selectedAnswer: string | null;
-  answerState: answerStateType;
+  index: number;
   onSelectAnswer: (selectedAnswer: string | null) => void;
   onSkipAnswer: () => void;
+}
+export interface answerStateType {
+  selectedAnswer: string;
+  isCorrect: boolean | null;
 }
 
 export interface QuestionTimerProps {
@@ -23,7 +22,7 @@ export interface QuestionTimerProps {
 
 export interface AnswersProps {
   answers: string[];
-  selectedAnswer: string | null;
-  answerState: answerStateType;
-  onSelect: (selectedAnswer: string | null) => void;
+  selectedAnswer: string;
+  answerState: string;
+  onSelect: (answer: string) => void;
 }

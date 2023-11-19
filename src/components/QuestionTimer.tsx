@@ -3,9 +3,7 @@ import { QuestionTimerProps } from '../types';
 
 function QuestionTimer({ timeout, onTimeout }: QuestionTimerProps) {
   const [remainingTime, setRemainingTime] = useState(timeout);
-  console.log('QuestionTimer rendered');
   useEffect(() => {
-    console.log('setTimeout called');
     const timer = setTimeout(onTimeout, timeout);
 
     return () => {
@@ -14,7 +12,6 @@ function QuestionTimer({ timeout, onTimeout }: QuestionTimerProps) {
   }, [onTimeout, timeout]);
 
   useEffect(() => {
-    console.log('setInterval called');
     const interval = setInterval(() => {
       setRemainingTime(prevRemainingTime => {
         return prevRemainingTime - 100;
