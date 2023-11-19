@@ -5,6 +5,8 @@ export type QuestionsType = {
   answers: [string, string, string, string]; // Tuple
 }[];
 
+export type answerStateType = 'answered' | 'correct' | 'wrong' | '';
+
 export interface QuestionTimerProps {
   timeout: number;
   onTimeout: () => void;
