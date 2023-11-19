@@ -17,7 +17,8 @@ export interface answerStateType {
 
 export interface QuestionTimerProps {
   timeout: number;
-  onTimeout: () => void;
+  mode: string;
+  onTimeout: (() => void) | null;
 }
 
 export interface AnswersProps {
