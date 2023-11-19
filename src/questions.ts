@@ -1,6 +1,6 @@
 import { QuestionsType } from './types';
 
-const questions: QuestionsType = [
+const QUESTIONS: QuestionsType = [
   {
     id: 'q1',
     text: 'Which of the following definitions best describes React.js?',
@@ -73,4 +73,4 @@ const questions: QuestionsType = [
   },
 ];
 
-export default questions;
+export default QUESTIONS;
