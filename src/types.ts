@@ -7,7 +7,23 @@ export type QuestionsType = {
 
 export type answerStateType = 'answered' | 'correct' | 'wrong' | '';
 
+export interface QuestionProps {
+  questionText: string;
+  answers: string[];
+  selectedAnswer: string | null;
+  answerState: answerStateType;
+  onSelectAnswer: (selectedAnswer: string | null) => void;
+  onSkipAnswer: () => void;
+}
+
 export interface QuestionTimerProps {
   timeout: number;
   onTimeout: () => void;
+}
+
+export interface AnswersProps {
+  answers: string[];
+  selectedAnswer: string | null;
+  answerState: answerStateType;
+  onSelect: (selectedAnswer: string | null) => void;
 }
